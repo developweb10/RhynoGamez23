@@ -1,0 +1,74 @@
+--
+-- For more information on build.settings see the Corona SDK Build Guide at:
+-- http://docs.coronalabs.com/guide/distribution/buildSettings/index.html
+--
+
+settings =
+{
+	orientation =
+	{
+		default = "landscapeRight",
+		supported = { "landscapeRight","landscapeLeft"}
+	},
+	android =
+	{
+		usesPermissions =
+		{
+			"android.permission.INTERNET",
+			"android.permission.ACCESS_NETWORK_STATE",
+			"android.permission.READ_PHONE_STATE",
+		},
+		--googlePlayGamesAppId = "###########", -- I'm using the correct Google Play Games App Id here (removed for this forum post)
+
+	},
+	iphone =
+	{
+		plist =
+		{
+			CFBundleIconFiles = {
+				"Icon.png", 
+				"Icon@2x.png", 
+				"Icon-60.png",
+				"Icon-60@2x.png",
+				"Icon-60@3x.png",
+				"Icon-72.png", 
+				"Icon-72@2x.png",
+				"Icon-76.png",
+				"Icon-76@2x.png", 
+				"Icon-Small.png", 
+				"Icon-Small@2x.png",
+				"Icon-Small@3x.png",
+				"Icon-Small-40.png",
+				"Icon-Small-40@2x.png",
+				"Icon-Small-50.png", 
+				"Icon-Small-50@2x.png",
+			},
+		},
+	},
+
+	plugins =
+	{
+		-- key is the name passed to Lua's 'require()'
+		--["CoronaProvider.ads.abmob"] =
+		--[[["plugin.google.play.services"] =
+		{
+			-- required
+			publisherId = "com.coronalabs",
+			
+			--supportedPlatforms = { iphone=true, android=true }
+		},--]]
+		--[[["CoronaProvider.ads.admob"] =
+		{
+			-- required
+			publisherId = "pub-4742219749339683",
+		},--]]
+		
+	--[[	["CoronaProvider.gameNetwork.google"] =
+{
+-- required
+publisherId = "com.coronalabs",
+supportedPlatforms = { android = true }
+},--]]
+		
+	},		
+}
